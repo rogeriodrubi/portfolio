@@ -1,0 +1,25 @@
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  position: relative;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+  padding: var(--spacing-xl) var(--spacing-md);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    min-height: auto;
+  }
+}
