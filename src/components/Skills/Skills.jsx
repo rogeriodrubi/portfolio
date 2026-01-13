@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../data/translations'
@@ -66,16 +66,6 @@ const Skills = () => {
 
   const SkillCard = ({ skill, index }) => {
     const IconComponent = iconMap[skill.icon] || FaCode
-    const [progress, setProgress] = useState(0)
-
-    useEffect(() => {
-      if (isInView) {
-        const timer = setTimeout(() => {
-          setProgress(skill.level)
-        }, index * 100)
-        return () => clearTimeout(timer)
-      }
-    }, [isInView, skill.level, index])
 
     return (
       <motion.div
@@ -87,17 +77,6 @@ const Skills = () => {
           <IconComponent className="skill-icon" />
         </div>
         <h4 className="skill-name">{skill.name}</h4>
-        <div className="skill-progress">
-          <div className="skill-progress-bar">
-            <motion.div
-              className="skill-progress-fill"
-              initial={{ width: 0 }}
-              animate={{ width: isInView ? `${progress}%` : 0 }}
-              transition={{ duration: 1, delay: index * 0.1 }}
-            />
-          </div>
-          <span className="skill-percentage">{progress}%</span>
-        </div>
       </motion.div>
     )
   }

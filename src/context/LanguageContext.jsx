@@ -12,12 +12,17 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    const savedLanguage = localStorage.getItem('language')
-    return savedLanguage || 'pt'
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('language')
+      return savedLanguage || 'pt'
+    }
+    return 'pt'
   })
 
   useEffect(() => {
-    localStorage.setItem('language', language)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', language)
+    }
   }, [language])
 
   const toggleLanguage = () => {

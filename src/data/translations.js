@@ -85,7 +85,7 @@ export const translations = {
             "Atuação em desenvolvimento web, automação com IA e desenvolvimento de agentes inteligentes para otimização de processos institucionais.",
           responsibilities: [
             "Desenvolvi fluxos de automação no n8n integrados a LLMs para análise de dados de grandes pesquisas institucionais, reduzindo o tempo de elaboração do relatório anual em 40%",
-            "Atuei no desenvolvimento do front da nova plataforma de avaliação para substituir sistemas legados, utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e mantendo versionamento rigoroso via Git",
+            "Atuei no desenvolvimento do front da nova plataforma de avaliação para substituir sistemas legados, utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas",
             "Implementei agentes de IA para triagem e resposta automática de e-mails, otimizando o fluxo de atendimento da secretaria ao automatizar protocolos padrões e encaminhamentos inteligentes melhorando e acelerando o suporte técnico à comunidade acadêmica",
             "Desenvolvi e mantive sistemas web internos, garantindo alta disponibilidade e melhorias contínuas em funcionalidades acessadas por docentes e equipes técnicas",
           ],
@@ -120,7 +120,7 @@ export const translations = {
           id: 5,
           title: "Plataforma de Avaliação UNIVASF",
           description:
-            "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e versionamento rigoroso via Git.",
+            "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas.",
         },
       ],
     },
@@ -211,7 +211,7 @@ export const translations = {
             "Worked in web development, AI automation and development of intelligent agents for optimization of institutional processes.",
           responsibilities: [
             "Developed n8n automation workflows integrated with LLMs for data analysis from large institutional surveys, reducing annual report preparation time by 40%",
-            "Worked on front-end development of the new evaluation platform to replace legacy systems, using Prompt Engineering with Taskmaster for task management and maintaining strict versioning via Git",
+            "Worked on front-end development of the new evaluation platform to replace legacy systems, using Prompt Engineering with Taskmaster for task management",
             "Implemented AI agents for email screening and automatic response, optimizing the secretariat's service flow by automating standard protocols and intelligent routing, improving and accelerating technical support to the academic community",
             "Developed and maintained internal web systems, ensuring high availability and continuous improvements in features accessed by faculty and technical teams",
           ],
@@ -246,7 +246,7 @@ export const translations = {
           id: 5,
           title: "UNIVASF Evaluation Platform",
           description:
-            "Front-end development of the new institutional evaluation platform to replace legacy systems. Using Prompt Engineering with Taskmaster for task management and strict versioning via Git.",
+            "Front-end development of the new institutional evaluation platform to replace legacy systems. Using Prompt Engineering with Taskmaster for task management.",
         },
       ],
     },
