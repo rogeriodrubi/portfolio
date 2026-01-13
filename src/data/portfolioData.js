@@ -1,7 +1,7 @@
 // Dados do portfólio - populados com informações do currículo
 export const portfolioData = {
   personal: {
-    name: "Rogério von Czekus Drubi",
+    name: "Rogerio von Czekus Drubi",
     title: "Desenvolvedor Web | AI-Augmented Developer",
     bio: "Graduando em Engenharia da Computação focado em Desenvolvimento Web. Experiência com IA e agentes de automação como ferramentas auxiliares para otimizar o fluxo de codificação e garantir a qualidade técnica das entregas. Com domínio em HTML, CSS e JavaScript, estou me aperfeiçoando no ecossistema React, buscando aplicar o conceito de AI-Augmented Development para construir interfaces modernas e funcionais.",
     photo: "/images/profile.jpg",
@@ -62,10 +62,10 @@ export const portfolioData = {
     {
       category: "Backend & Database",
       items: [
-        { name: "PHP", level: 75, icon: "FaPhp" },
-        { name: "MySQL", level: 70, icon: "SiMysql" },
-        { name: "Node.js", level: 65, icon: "FaNode" },
-        { name: "Python", level: 70, icon: "FaPython" },
+        { name: "Python", level: 75, icon: "FaPython" },
+        { name: "MySQL", level: 60, icon: "SiMysql" },
+        { name: "Node.js", level: 50, icon: "FaNode" },
+        { name: "PHP", level: 40, icon: "FaPhp" },
       ],
     },
     {
@@ -73,24 +73,16 @@ export const portfolioData = {
       items: [
         { name: "LLMs", level: 85, icon: "FaCode" },
         { name: "n8n", level: 80, icon: "FaCode" },
-        { name: "Keras", level: 70, icon: "FaCode" },
         { name: "Deep Learning", level: 75, icon: "FaCode" },
-      ],
-    },
-    {
-      category: "Mobile",
-      items: [
-        { name: "Flutter", level: 75, icon: "FaCode" },
-        { name: "Dart", level: 70, icon: "FaCode" },
       ],
     },
     {
       category: "Tools & Others",
       items: [
         { name: "Git", level: 90, icon: "FaGitAlt" },
-        { name: "Linux", level: 80, icon: "FaLinux" },
+        { name: "Scrum", level: 90, icon: "FaProjectDiagram" },
+        { name: "Linux", level: 60, icon: "FaLinux" },
         { name: "Bash", level: 75, icon: "FaTerminal" },
-        { name: "Scrum", level: 80, icon: "FaProjectDiagram" },
         { name: "Google Sheets API", level: 85, icon: "FaCode" },
         { name: "Gmail API", level: 80, icon: "FaCode" },
       ],
@@ -160,17 +152,6 @@ export const portfolioData = {
         "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e versionamento rigoroso via Git.",
       image: "/images/project-platform.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "Git", "Scrum", "Taskmaster"],
-      demoUrl: "",
-      codeUrl: "",
-      featured: true,
-    },
-    {
-      id: 6,
-      title: "Agentes de IA para Automação de E-mails",
-      description:
-        "Sistema de agentes de IA implementado para triagem e resposta automática de e-mails, otimizando o fluxo de atendimento da secretaria. Automatiza protocolos padrões e encaminhamentos inteligentes, melhorando e acelerando o suporte técnico à comunidade acadêmica.",
-      image: "/images/project-ai-agents.jpg",
-      technologies: ["LLMs", "n8n", "Gmail API", "Automation", "AI Agents"],
       demoUrl: "",
       codeUrl: "",
       featured: true,

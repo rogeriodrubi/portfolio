@@ -12,13 +12,16 @@ const Experience = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
-  const experience = portfolioData.experience[0] || {
-    company: 'Nome da Empresa',
-    position: 'Cargo',
-    period: 'Mês/Ano - Mês/Ano',
-    description: 'Descrição da experiência...',
-    responsibilities: ['Responsabilidade 1', 'Responsabilidade 2'],
-    technologies: ['React', 'JavaScript'],
+  const experienceData = t.portfolio.experience[0] || {
+    company: '',
+    position: '',
+    period: '',
+    description: '',
+    responsibilities: [],
+  }
+  const experience = {
+    ...experienceData,
+    technologies: portfolioData.experience[0]?.technologies || [],
   }
 
   const containerVariants = {
@@ -98,7 +101,7 @@ const Experience = () => {
 
             {experience.technologies && experience.technologies.length > 0 && (
               <div className="experience-technologies">
-                <h5 className="technologies-title">Tecnologias:</h5>
+                <h5 className="technologies-title">{t.experience.technologies}:</h5>
                 <div className="technologies-tags">
                   {experience.technologies.map((tech, index) => (
                     <span key={index} className="tech-tag">

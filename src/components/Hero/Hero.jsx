@@ -99,10 +99,9 @@ const Hero = () => {
         </motion.div>
 
         <motion.p className="hero-description" variants={itemVariants}>
-          {t.hero.description} usando
+          {t.hero.description} {t.hero.usingTech}
           <span className="tech-highlight"> React</span>,
-          <span className="tech-highlight"> JavaScript</span> e tecnologias
-          modernas
+          <span className="tech-highlight"> JavaScript</span> {t.hero.andModernTech}
         </motion.p>
 
         <motion.div className="hero-buttons" variants={itemVariants}>

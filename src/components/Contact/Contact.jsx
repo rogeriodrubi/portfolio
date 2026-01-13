@@ -4,7 +4,7 @@ import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../data/translations'
 import { portfolioData } from '../../data/portfolioData'
 import { sendEmail } from '../../utils/emailService'
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -76,6 +76,28 @@ const Contact = () => {
     }
   }
 
+  const handleDownloadCV = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await fetch('/cv/curriculo.pdf')
+      if (!response.ok) {
+        throw new Error(t.contact.fileNotFound)
+      }
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = 'curriculo.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      window.URL.revokeObjectURL(url)
+    } catch (error) {
+      console.error('Erro ao baixar CV:', error)
+      alert(t.contact.downloadError)
+    }
+  }
+
   const socialLinks = [
     {
       name: 'GitHub',
@@ -86,11 +108,6 @@ const Contact = () => {
       name: 'LinkedIn',
       url: portfolioData.personal.social.linkedin,
       icon: FaLinkedin,
-    },
-    {
-      name: 'Email',
-      url: `mailto:${portfolioData.personal.email}`,
-      icon: FaEnvelope,
     },
   ]
 
@@ -184,8 +201,10 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(social.url.startsWith('mailto:') 
+                      ? {} 
+                      : { target: '_blank', rel: 'noopener noreferrer' }
+                    )}
                     className="social-link"
                   >
                     <social.icon className="social-icon" />
@@ -195,16 +214,15 @@ const Contact = () => {
               </div>
             </div>
 
-            <motion.a
-              href="/cv/curriculo.pdf"
-              download
+            <motion.button
+              onClick={handleDownloadCV}
               className="download-cv-btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FaDownload />
               <span>{t.contact.downloadCV}</span>
-            </motion.a>
+            </motion.button>
           </motion.div>
         </div>
       </motion.div>

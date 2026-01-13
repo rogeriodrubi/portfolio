@@ -73,6 +73,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: var(--spacing-md);
+  width: 100%;
 }
 
 .hero-greeting {
@@ -89,10 +90,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .name-highlight {
   position: relative;
+  display: inline-block;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  white-space: nowrap;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.2;
 }
 
 .hero-subtitle-wrapper {
@@ -247,5 +261,13 @@
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .name-highlight {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .hero-name {
+    font-size: clamp(1.5rem, 5vw, 3rem);
   }
 }

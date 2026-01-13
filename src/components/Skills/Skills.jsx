@@ -13,6 +13,14 @@ const Skills = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
+  // Mapeamento de categorias
+  const categoryMap = {
+    'Frontend': t.skills.categories.frontend,
+    'Backend & Database': t.skills.categories.backend,
+    'IA & Automação': t.skills.categories.ai,
+    'Tools & Others': t.skills.categories.tools,
+  }
+
   // Mapeamento de ícones
   const iconMap = {
     // Frontend
@@ -115,7 +123,7 @@ const Skills = () => {
             className="skills-category"
             variants={itemVariants}
           >
-            <h3 className="category-title">{category.category}</h3>
+            <h3 className="category-title">{categoryMap[category.category] || category.category}</h3>
             <div className="skills-grid">
               {category.items.map((skill, index) => (
                 <SkillCard

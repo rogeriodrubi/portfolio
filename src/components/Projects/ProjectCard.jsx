@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { FaExternalLinkAlt, FaGithub, FaEye } from 'react-icons/fa'
 import './Projects.css'
 
-const ProjectCard = ({ project, index, onOpenModal }) => {
+const ProjectCard = ({ project, index, onOpenModal, featuredLabel = 'Featured' }) => {
   return (
     <motion.div
       className="project-card"
@@ -13,7 +13,21 @@ const ProjectCard = ({ project, index, onOpenModal }) => {
       whileHover={{ y: -10, scale: 1.02 }}
     >
       <div className="project-image-wrapper">
-        <div className="project-image-placeholder">
+        {project.image ? (
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="project-image"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'flex';
+            }}
+          />
+        ) : null}
+        <div 
+          className="project-image-placeholder"
+          style={{ display: project.image ? 'none' : 'flex' }}
+        >
           <FaEye className="placeholder-icon" />
         </div>
         <div className="project-overlay">
@@ -49,7 +63,7 @@ const ProjectCard = ({ project, index, onOpenModal }) => {
           </div>
         </div>
         {project.featured && (
-          <div className="project-featured-badge">Featured</div>
+          <div className="project-featured-badge">{featuredLabel}</div>
         )}
       </div>
 

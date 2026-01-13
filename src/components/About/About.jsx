@@ -11,11 +11,12 @@ const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [counted, setCounted] = useState(false)
+  const [imageError, setImageError] = useState(false)
 
   const stats = [
-    { number: 3, suffix: '+', label: 'Anos de Experiência' },
-    { number: 20, suffix: '+', label: 'Projetos Realizados' },
-    { number: 10, suffix: '+', label: 'Tecnologias' },
+    { number: 2, suffix: '', label: t.about.statsYears },
+    { number: 10, suffix: '+', label: t.about.statsProjects },
+    { number: 10, suffix: '+', label: t.about.statsTech },
   ]
 
   useEffect(() => {
@@ -97,14 +98,23 @@ const About = () => {
           <motion.div className="about-text" variants={itemVariants}>
             <div className="about-image-wrapper">
               <div className="about-image">
-                <div className="image-placeholder">
-                  {portfolioData.personal.name.charAt(0)}
-                </div>
+                {portfolioData.personal.photo && !imageError ? (
+                  <img 
+                    src={portfolioData.personal.photo} 
+                    alt={portfolioData.personal.name}
+                    className="profile-image"
+                    onError={() => setImageError(true)}
+                  />
+                ) : (
+                  <div className="image-placeholder">
+                    {portfolioData.personal.name.charAt(0)}
+                  </div>
+                )}
                 <div className="image-glow"></div>
               </div>
             </div>
             <p className="about-description">
-              {portfolioData.personal.bio || t.about.description}
+              {t.portfolio.personal.bio || t.about.description}
             </p>
           </motion.div>
 

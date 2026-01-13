@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../data/translations'
@@ -13,6 +13,27 @@ const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [selectedProject, setSelectedProject] = useState(null)
+
+  // Mesclar projetos traduzidos com dados estáticos
+  const projects = portfolioData.projects.map((project, index) => {
+    const translatedProject = t.portfolio.projects[index] || {}
+    return {
+      ...project,
+      title: translatedProject.title || project.title,
+      description: translatedProject.description || project.description,
+    }
+  })
+
+  // Atualizar selectedProject quando o idioma mudar
+  useEffect(() => {
+    if (selectedProject) {
+      const updatedProject = projects.find(p => p.id === selectedProject.id)
+      if (updatedProject) {
+        setSelectedProject(updatedProject)
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,12 +81,13 @@ const Projects = () => {
         </motion.p>
 
         <div className="projects-grid">
-          {portfolioData.projects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
               index={index}
               onOpenModal={openModal}
+              featuredLabel={t.projects.featured}
             />
           ))}
         </div>
@@ -90,13 +112,27 @@ const Projects = () => {
               <button
                 className="modal-close"
                 onClick={closeModal}
-                aria-label="Close modal"
+                aria-label={t.projects.closeModal}
               >
                 <FaTimes />
               </button>
 
               <div className="modal-image">
-                <div className="project-image-placeholder-large">
+                {selectedProject.image ? (
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title}
+                    className="modal-project-image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextElementSibling.style.display = 'flex';
+                    }}
+                  />
+                ) : null}
+                <div 
+                  className="project-image-placeholder-large"
+                  style={{ display: selectedProject.image ? 'none' : 'flex' }}
+                >
                   {selectedProject.title}
                 </div>
               </div>
