@@ -12,7 +12,7 @@
   --text-secondary: #6c757d;
 
   /* Gradients - Light Mode */
-  --gradient-primary: linear-gradient(135deg, #03a110 0%, #046b5d 100%);
+  --gradient-primary: linear-gradient(135deg, #31ce80 0%, #04686b 100%);
   --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
   --gradient-accent: linear-gradient(135deg, #e4c665 0%, #e03232 100%);
   --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
@@ -52,7 +52,7 @@
   /* Gradients - Dark Mode (more saturated) */
   --gradient-primary: linear-gradient(135deg, #31ce80 0%, #04686b 100%);
   --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-  --gradient-accent: linear-gradient(135deg, #e4c665 0%, #e03232 100%);
+  --gradient-accent: linear-gradient(135deg, #e6e34e 0%, #e0740e 100%);
   --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 
   /* Shadows - Dark Mode */
