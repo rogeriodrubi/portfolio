@@ -94,33 +94,39 @@ export const translations = {
       projects: [
         {
           id: 1,
+          title: "Site da Imobiliaria Capitale PNZ",
+          description:
+            "Plataforma imobiliária para compra de imóveis e terrenos. Possui mapa interativo de lotes, galeria de imagens otimizada e integração com banco de dados em tempo real, focando em performance e UX responsiva.",
+        },
+        {
+          id: 2,
+          title: "Plataforma de Avaliação UNIVASF",
+          description:
+            "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e versionamento rigoroso via Git.",
+        },
+        {
+          id: 3,
           title: "Detecção de Ponto de Colheita com IA",
           description:
             "Desenvolvi uma rede neural convolucional (CNN) para identificar, por meio de imagens de drones, se uma plantação estava pronta para a colheita. Projeto da disciplina de Deep Learning utilizando técnicas avançadas de aprendizado profundo.",
         },
         {
-          id: 2,
+          id: 4,
           title: "Detecção de Estresse e Doenças em Árvores",
           description:
             "Reproduzi modelo de artigo científico que utilizava imagens de folhas para identificar estresse e possíveis doenças em árvores. Projeto focado em aplicação prática de deep learning para agricultura sustentável.",
         },
         {
-          id: 3,
+          id: 5,
           title: "Aplicativo SIBI-UNIVASF",
           description:
             "Aplicativo oficial do Sistema Integrado de Bibliotecas da universidade, desenvolvido com Flutter e metodologia Scrum. Projeto acadêmico focado em desenvolvimento mobile moderno e práticas ágeis.",
         },
         {
-          id: 4,
+          id: 6,
           title: "Aplicativo Caatinga Lens",
           description:
             "Aplicativo criado para o Projeto Escola Verde, com foco em educação ambiental através de tecnologia mobile. Desenvolvido com Flutter utilizando metodologias ágeis de desenvolvimento.",
-        },
-        {
-          id: 5,
-          title: "Plataforma de Avaliação UNIVASF",
-          description:
-            "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas.",
         },
       ],
     },
@@ -220,33 +226,39 @@ export const translations = {
       projects: [
         {
           id: 1,
+          title: "Capitale PNZ Real Estate Website",
+          description:
+            "Real estate platform for buying properties and land. Features an interactive lot map, optimized image gallery and real-time database integration, focusing on performance and responsive UX.",
+        },
+        {
+          id: 2,
+          title: "UNIVASF Evaluation Platform",
+          description:
+            "Front-end development of the new institutional evaluation platform to replace legacy systems. Using Prompt Engineering with Taskmaster for task management and strict versioning via Git.",
+        },
+        {
+          id: 3,
           title: "AI Harvest Point Detection",
           description:
             "Developed a convolutional neural network (CNN) to identify, through drone images, whether a crop was ready for harvest. Deep Learning course project using advanced deep learning techniques.",
         },
         {
-          id: 2,
+          id: 4,
           title: "Tree Stress and Disease Detection",
           description:
             "Reproduced a scientific paper model that used leaf images to identify stress and possible diseases in trees. Project focused on practical application of deep learning for sustainable agriculture.",
         },
         {
-          id: 3,
+          id: 5,
           title: "SIBI-UNIVASF Application",
           description:
             "Official application of the Integrated Library System of the university, developed with Flutter and Scrum methodology. Academic project focused on modern mobile development and agile practices.",
         },
         {
-          id: 4,
+          id: 6,
           title: "Caatinga Lens Application",
           description:
             "Application created for the Green School Project, focused on environmental education through mobile technology. Developed with Flutter using agile development methodologies.",
-        },
-        {
-          id: 5,
-          title: "UNIVASF Evaluation Platform",
-          description:
-            "Front-end development of the new institutional evaluation platform to replace legacy systems. Using Prompt Engineering with Taskmaster for task management.",
         },
       ],
     },

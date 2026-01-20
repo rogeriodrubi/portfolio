@@ -90,6 +90,35 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "Site da Imobiliaria Capitale PNZ",
+      description:
+        "Plataforma imobiliária para compra de imóveis e terrenos. Possui mapa interativo de lotes, galeria de imagens otimizada e integração com banco de dados em tempo real, focando em performance e UX responsiva.",
+      image: "/images/project-capitale.jpg",
+      technologies: [
+        "Next.js 15",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Supabase",
+      ],
+      demoUrl: "https://capitalepnz.vercel.app/",
+      codeUrl: "https://github.com/rogeriodrubi/capitale",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Plataforma de Avaliação UNIVASF",
+      description:
+        "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e versionamento rigoroso via Git.",
+      image: "/images/project-platform.jpg",
+      technologies: ["HTML", "CSS", "JavaScript", "Git", "Scrum", "Taskmaster"],
+      demoUrl: "",
+      codeUrl: "",
+      featured: false,
+    },
+    {
+      id: 3,
       title: "Detecção de Ponto de Colheita com IA",
       description:
         "Desenvolvi uma rede neural convolucional (CNN) para identificar, por meio de imagens de drones, se uma plantação estava pronta para a colheita. Projeto da disciplina de Deep Learning utilizando técnicas avançadas de aprendizado profundo.",
@@ -97,10 +126,10 @@ export const portfolioData = {
       technologies: ["Python", "Keras", "Deep Learning", "CNN", "Google Colab"],
       demoUrl: "",
       codeUrl: "https://github.com/rogeriodrubi",
-      featured: true,
+      featured: false,
     },
     {
-      id: 2,
+      id: 4,
       title: "Detecção de Estresse e Doenças em Árvores",
       description:
         "Reproduzi modelo de artigo científico que utilizava imagens de folhas para identificar estresse e possíveis doenças em árvores. Projeto focado em aplicação prática de deep learning para agricultura sustentável.",
@@ -114,10 +143,10 @@ export const portfolioData = {
       ],
       demoUrl: "",
       codeUrl: "https://github.com/rogeriodrubi",
-      featured: true,
+      featured: false,
     },
     {
-      id: 3,
+      id: 5,
       title: "Aplicativo SIBI-UNIVASF",
       description:
         "Aplicativo oficial do Sistema Integrado de Bibliotecas da universidade, desenvolvido com Flutter e metodologia Scrum. Projeto acadêmico focado em desenvolvimento mobile moderno e práticas ágeis.",
@@ -128,7 +157,7 @@ export const portfolioData = {
       featured: false,
     },
     {
-      id: 4,
+      id: 6,
       title: "Aplicativo Caatinga Lens",
       description:
         "Aplicativo criado para o Projeto Escola Verde, com foco em educação ambiental através de tecnologia mobile. Desenvolvido com Flutter utilizando metodologias ágeis de desenvolvimento.",
@@ -143,17 +172,6 @@ export const portfolioData = {
       demoUrl: "",
       codeUrl: "https://github.com/rogeriodrubi",
       featured: false,
-    },
-    {
-      id: 5,
-      title: "Plataforma de Avaliação UNIVASF",
-      description:
-        "Desenvolvimento do front-end da nova plataforma de avaliação institucional para substituir sistemas legados. Utilizando Engenharia de Prompt com Taskmaster para gerenciamento de tarefas e versionamento rigoroso via Git.",
-      image: "/images/project-platform.jpg",
-      technologies: ["HTML", "CSS", "JavaScript", "Git", "Scrum", "Taskmaster"],
-      demoUrl: "",
-      codeUrl: "",
-      featured: true,
     },
   ],
   education: [
