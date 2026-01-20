@@ -64,8 +64,7 @@ export const portfolioData = {
       items: [
         { name: "Python", level: 75, icon: "FaPython" },
         { name: "MySQL", level: 60, icon: "SiMysql" },
-        { name: "Node.js", level: 50, icon: "FaNode" },
-        { name: "PHP", level: 40, icon: "FaPhp" },
+        { name: "PHP", level: 30, icon: "FaPhp" },
       ],
     },
     {
