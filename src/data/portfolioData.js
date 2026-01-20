@@ -90,7 +90,7 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Site da Imobiliaria Capitale PNZ",
+      title: "Site da Imobiliaria Capitale",
       description:
         "Plataforma imobiliária para compra de imóveis e terrenos. Possui mapa interativo de lotes, galeria de imagens otimizada e integração com banco de dados em tempo real, focando em performance e UX responsiva.",
       image: "/images/project-capitale.jpg",
