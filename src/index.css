@@ -12,10 +12,10 @@
   --text-secondary: #6c757d;
 
   /* Gradients - Light Mode */
-  --gradient-primary: linear-gradient(135deg, #31ce80 0%, #04686b 100%);
-  --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-  --gradient-accent: linear-gradient(135deg, #e4c665 0%, #e03232 100%);
-  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --gradient-primary: linear-gradient(135deg, #27b46e 0%, #023d3f 100%);
+  --gradient-secondary: linear-gradient(135deg, #c59503 0%, #df1818 100%);
+  --gradient-accent: linear-gradient(135deg, #c59503 0%, #df1818 100%);
+  --gradient-success: linear-gradient(135deg, #27b46e 0%, #023d3f 100%);
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,10 +51,9 @@
 
   /* Gradients - Dark Mode (more saturated) */
   --gradient-primary: linear-gradient(135deg, #31ce80 0%, #04686b 100%);
-  --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  --gradient-secondary: linear-gradient(135deg, #e4c665 0%, #e03232 100%);
   --gradient-accent: linear-gradient(135deg, #e4c665 0%, #e03232 100%);
-  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-
+  --gradient-success: linear-gradient(135deg, #31ce80 0%, #04686b 100%);
   /* Shadows - Dark Mode */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
