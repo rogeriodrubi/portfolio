@@ -226,7 +226,7 @@ export const translations = {
       projects: [
         {
           id: 1,
-          title: "Capitale PNZ Real Estate Website",
+          title: "Capitale Real Estate Website",
           description:
             "Real estate platform for buying properties and land. Features an interactive lot map, optimized image gallery and real-time database integration, focusing on performance and responsive UX.",
         },
