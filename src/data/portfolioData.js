@@ -125,7 +125,7 @@ export const portfolioData = {
       image: "/images/project-harvest.jpg",
       technologies: ["Python", "Keras", "Deep Learning", "CNN", "Google Colab"],
       demoUrl: "",
-      codeUrl: "https://github.com/rogeriodrubi",
+      codeUrl: "",
       featured: false,
     },
     {
@@ -142,7 +142,7 @@ export const portfolioData = {
         "Google Colab",
       ],
       demoUrl: "",
-      codeUrl: "https://github.com/rogeriodrubi",
+      codeUrl: "",
       featured: false,
     },
     {
@@ -153,7 +153,7 @@ export const portfolioData = {
       image: "/images/project-sibi.jpg",
       technologies: ["Flutter", "Dart", "Scrum", "Mobile Development"],
       demoUrl: "",
-      codeUrl: "https://github.com/rogeriodrubi",
+      codeUrl: "",
       featured: false,
     },
     {
@@ -170,7 +170,7 @@ export const portfolioData = {
         "Environmental Tech",
       ],
       demoUrl: "",
-      codeUrl: "https://github.com/rogeriodrubi",
+      codeUrl: "",
       featured: false,
     },
   ],
